@@ -11,21 +11,27 @@
 @import "/css/reset.css";
 @import "/css/comments.css";
 
+:root {
+  --bg-color: #8A3511;
+  --text-color: #8A3511;
+  --cotent-bg: #FFebca;
+  --border-color: #BF742F;
+  --link-color: #3C4022;
+  --link-color-hover: #616837;
+}
+
+
 /* FONTS */
 
-header,
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: "IM Fell English", serif;
+/* header font */
+.cherry-bomb-one-regular {
+  font-family: "Cherry Bomb One", system-ui;
   font-weight: 400;
   font-style: normal;
-  /**
-   * Todo: Write why we use rem units and set them throughout the stylesheet
-   * https://www.youtube.com/watch?v=N5wpD9Ov_To
-   */
+}
+ header, h1, h2, h3, h4, h5 {
+  font-family: "Cherry Bomb One";
+  color: var(--text-color);
   margin-bottom: 1rem;
 }
 
@@ -41,45 +47,6 @@ img {
 
 /* GLOBAL */
 
-/**
- * :root targets the root element of the document; in practice, it targets the
- * `<html>` tag, just with a higher specificity than calling it directly. It's
- * most commonly used for defining custom variables, which you can see below!
- * (https://developer.mozilla.org/en-US/docs/Web/CSS/:root)
- */
-:root {
-  /**
-   * Custom variables allow us to set repeating values in one place. In this
-   * case, we're defining the maximum width of our pages.
-   * (https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
-   *
-   * Also, check out the `min()` property: it picks whatever is the smallest of
-   * the two given properties as the width! For more details on it and similar
-   * properties, check out Kevin Powell's video: https://youtu.be/U9VF-4euyRo
-   */
-  --pg-width: min(64rem, 90%);
-  /* page width for double/spread pages that are one page */
-  --double-pg-width: min(84rem, 100%);
-
-  /**
-  * The following is variables that set colours for things on the site.
-  * If you just want to swap some colours, likely this is all you have to touch.
-  **/
-  /* universal background color */
-  --bg-color: #f1ece4;
-  /* the colour of links */
-  --link-color: #222;
-  /* link colours when hovered over */
-  --link-color-hover: #da5437;
-  --text-color: #222;
-
-   /**
-  * I recommend not changing this, UNLESS you are getting rid of the paper tear effect
-  * If you DON'T want the paper tear effect remove from PAPER TEAR BEGIN to PAPER TEAR END
-  * Roughly lines 149-172 of this file, although that might move a bit as things get added.
-  **/
-  --content-bg: #fff;
-}
 
 body {
   background-color: var(--bg-color);
