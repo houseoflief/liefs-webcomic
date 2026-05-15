@@ -2,12 +2,6 @@
 title: About
 layout: layouts/page.liquid
 ---
-This is an example of how to use the **Rarebit** template. It uses a public domain comic strip called **Teena** that ran in newspapers from 1944 to 1963.
+Lief is a trans man living in Columbus, OH, staunchly refusing to move despite the state legislators doing their level best to scare him off. When he's not working on House of Lief, he can be found riding my bike, watching 12 episode animes, and complaining about his arch nemesis John Kaschic, who among his many other inadequacies as a politician, refused to accept grant money for an Amtrak line in Columbus in 2013. He also manages the websites for the Queer Zest Zine Fest and Comix Accountability Club.
 
-The author, **Hilda Terry**, became the first woman allowed to join the National Cartoonists Society, upon which she lobbied for other women cartoonists to join, such as **Mopsy** author **Gladys Parker**.
-
-![Image of Hilda Terry](/img/hildaterry.png)
-
-She also held a firm belief that she was a reincarnation of **Dorcas Good**, a child imprisoned after being accused of practicing witchcraft in the 1692 Salem witch trials.
-
-Say what you will, but the lady's got range!
+Right now the main project under House of Lief is Lief's comic diary, a mostly auto-biographical weekly comic strip. His other ongoing projects include The Orange Peel, a quarterly zine where he write about comics, as well as a handful of 12-24 page one-shot comics. 
