@@ -1,8 +1,8 @@
 {
-	"title": "Your comic name here",
-	"base": "https://example.com",
-	"description": "Your comic description here",
-	"author": "Your Name",
-	"authorEmail": "katedrwecka@gmail.com",
+	"title": "House of Lief",
+	"base": "https://houseoflief.com",
+	"description": "A slice of life, semi-autobiographical webcomic about bikes, computers, and comics",
+	"author": "Lief Bennett",
+	"authorEmail": "lief@houseoflief.com",
 	"language": "en"
 }
