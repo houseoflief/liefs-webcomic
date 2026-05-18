@@ -2,7 +2,7 @@
 title: Gallery
 layout: layouts/page.liquid
 ---
-
+<!--This gallery page was adapted from https://www.geeksforgeeks.org/javascript/how-to-create-responsive-modal-images-using-css-javascript/. It displays a mobile responsive grid of images and opens a popup modal when an image is clicked showing the image at a larger size and displaying the name of the illustration. Use this for a portfolio page, gallery of fanart, or whatever you want! -->
 <!--Script controlling the popup modal for the gallery-->
  <script>
         function openModal(modalId, index) {
@@ -37,7 +37,7 @@ layout: layouts/page.liquid
 
 {% for item in collections.gallery %}
 
-   <div id="modal{{ item.data.id }}" class="modal" onclick="closeModal('modal{{ item.data.id }}')">
+   <div id="modal{{ item.data.id }}" class="modal" onclick="closeModal('modal{{ item.data.id }}')" style="display:none">
       <span class="close">
           &times;
       </span>
