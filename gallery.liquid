@@ -2,47 +2,50 @@
 title: Gallery
 layout: layouts/page.liquid
 ---
-<script>
-$(document).ready(function() {
 
-  // required elements
-  var imgPopup = $('.img-popup');
-  var imgCont  = $('.gallery-item');
-  var popupImage = $('.img-popup img');
-  var closeBtn = $('.close-btn');
+<!--Script controlling the popup modal for the gallery-->
+ <script>
+        function openModal(modalId, index) {
+            let modal = document.getElementById(modalId);
+            modal.style.display = "flex";
+            modal.classList.add("show");
+            
+        }
+        
 
-  // handle events
-  imgCont.on('click', function() {
-    var img_src = $(this).children('img').attr('src');
-    imgPopup.children('img').attr('src', img_src);
-    imgPopup.addClass('opened');
-  });
+        function closeModal(modalId) {
+            let modal = document.getElementById(modalId);
+            modal.classList.remove("show");
+            setTimeout(function () {
+                modal.style.display = "none";
+            }, 300);
+        }
+    </script>
 
-  $(imgPopup, closeBtn).on('click', function() {
-    imgPopup.removeClass('opened');
-    imgPopup.children('img').attr('src', '');
-  });
+<!--The gallery grid is generated using a for loop that calls all items in the gallery collection-->
 
-  popupImage.on('click', function(e) {
-    e.stopPropagation();
-  });
-  
-});
-</script>
+<div class="gallery">
 
-<div class = "gallery">
 {% for item in collections.gallery %}
-   <div class = "gallery-item">
-        <img src="{{ item.data.images[0] }}" width="300" alt="{{ item.data.title }} title="{{ item.data.title }}">
-   </div>
+        <img src="{{ item.data.images }}" onclick="openModal('modal{{ item.data.id }}', {{item.data.id}})" alt="{{ item.data.title }}" class="gallery-image">
   {% endfor %}
+
 </div>
 
-<div class="img-popup">
-  <img src="" alt="Popup Image">
-  <div class="close-btn">
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
-</div>
+
+<!--The gallery popup modal uses a for loop to generate unique modal behavior for each image in the gallery collection--> 
+
+{% for item in collections.gallery %}
+
+   <div id="modal{{ item.data.id }}" class="modal" onclick="closeModal('modal{{ item.data.id }}')">
+      <span class="close" 
+              onclick="closeModal('modal{{ item.data.id }}')">
+          &times;
+      </span>
+      <img src="{{ item.data.images }}" alt="{{ item.data.title }}" title="{{ item.data.title }}" class="modal-content" sizes="none">  
+      <div class="message"><h2>{{ item.data.title }}</h2></div>
+
+    </div>
+    
+   {% endfor %}
 
