@@ -38,8 +38,7 @@ layout: layouts/page.liquid
 {% for item in collections.gallery %}
 
    <div id="modal{{ item.data.id }}" class="modal" onclick="closeModal('modal{{ item.data.id }}')">
-      <span class="close" 
-              onclick="closeModal('modal{{ item.data.id }}')">
+      <span class="close">
           &times;
       </span>
       <img src="{{ item.data.images }}" alt="{{ item.data.title }}" title="{{ item.data.title }}" class="modal-content" sizes="none">  
