@@ -1,4 +1,4 @@
 {
     "tags": ["gallery"],
-    "layout": "layouts/strip.liquid"
+    "layout": "layouts/page.liquid"
 }
