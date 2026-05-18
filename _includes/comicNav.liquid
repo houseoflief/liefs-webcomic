@@ -21,15 +21,6 @@ we're on the first page of the comic, we don't need to show that button.
   {% if previous %}
     <a href="{{ previous.url }}"><img src="/img/comicnav/nav_previous.png" alt="Previous"></a>
   {% endif %}
-
-
-<select class="archive-select" onchange="window.location.href=this.value;">
-    <option value="" disabled selected>Select a comic...</option>
-    {% for item in collection -%}
-        <option value="{{ item.url }}">{{ item.data.title }}</option>
-    {%- endfor %}
-</select>
-
   {% if next %}
     <a href="{{ next.url }}"><img src="/img/comicnav/nav_next.png" alt="Next"></a>
   {% endif %}
