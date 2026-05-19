@@ -1,11 +1,12 @@
 ---
+title: Blog
 layout: layouts/page.liquid
 ---
-<h1>Blog</h1>
-{ % for item in collections.blog % }
+
+{% for item in collections.blog %}
 <div>
     <h2>{{ item.data.title }}</h2>
     <p>{{ item.data.date }}</p>
     {{ content }}
 </div>
-{ % end for % }
+{% end for %}
