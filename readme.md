@@ -1,10 +1,12 @@
-# eleventy-webcomic
+# lief's eleventy-webcomic
 
-> This is a quick overview of things if you kind of know what you're doing. More extensive instructions are coming!!
+I'm lief and I'm a comic artist by night, software QA and SEO analyst by day! This repository is my adaptation of [Katedee's Eleventy-webcomic](https://github.com/katedee/eleventy-webcomic), which is a template, built off of the Rashon's [eleventy-rarebit](https://github.com/the-rashons/eleventy-rarebit-template), which itself is built to replicate the functionality found in [geno7's](https://geno7.neocities.org/) [Rarebit](https://rarebit.neocities.org/) webcomic template.
 
-This is a template of a template of a template. Eleventy-webcomic is a template, built off of the Rashon's [eleventy-rarebit](), which itself is built to replicate the functionality found in [geno7's](https://geno7.neocities.org/) [Rarebit](https://rarebit.neocities.org/) webcomic template.
+I'm keeping this repository public so my good friends in the [Comix Accountability Club](https://comixaccountability.club) can use my work to make their own websites. I've made a few main changes to Katedee's work (with a few more underway!). First, I've added a gallery collection and content page. This is for my more professionally inclined colleagues who might have an illustration portfolio they'd like to share alongside their comics. I've also added an archive selector to the index/comics pages, so readers can jump to any page without going to the archive page. Coming soon are some modifications to the archive page to allow more customized arc names, as well as a blog functionality. 
 
-## Features
+
+
+## Features (This text is cloned from katedee's readme) 
 
 - **Mostly Static**: Built from [Liquid](https://www.11ty.dev/docs/languages/liquid/) templates, pages core functions no longer require JavaScript. ([Why does this matter?](https://adamsilver.io/blog/javascript-isnt-always-available-and-its-not-the-users-fault/)). There are some "additional" features (comments, navigating with keyboard arrow keys, archive drop down selection) which require javascript, but the core reading experience functions just fine!
 
