@@ -7,7 +7,7 @@ layout: layouts/page.liquid
 <div>
     <h2> {{ item.data.title }} </h2>
     <p class="authorNotes-date">posted on {{ item.data.date | utcDate }}</p>
-    {{ content | safe }}
+    {{ item.content }}
 
 </div>
 {% endfor %}
