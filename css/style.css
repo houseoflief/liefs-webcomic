@@ -138,6 +138,7 @@ footer p {
   background: var(--content-bg);
   position: relative;
   width: var(--pg-width);
+  align-self: center;
 }
 
 /* PAPER TEAR BEGIN - start removing here if you don't want the paper effect */
