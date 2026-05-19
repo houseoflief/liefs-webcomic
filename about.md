@@ -6,4 +6,5 @@ Lief is a trans man living in Columbus, OH, staunchly refusing to move despite t
 
 <h2>Notes for Nerds</h2>
 <p>This site was built using the <a href="https://github.com/katedee/eleventy-webcomic" target="_blank">Eleventy Webcomic Template</a>, the delightful love-child of Rarebit (a neocities webcomic template mostly reliant on JavaScript) and Eleventy (A wonderfully elegant static site generator). The site is hosted on <a href="https://neocities.org" target="_blank">Neocities</a> and developed using a Lenovo T470 Thinkpad running Linux Mint (since the deprecation of Windows 10).</p>
+<p>I digitize my comics on a Huion Camvas 22 drawing tablet on a Dell G5 desktop with Affinity Studio, a free all in one illustration/photo/publisher software for desktop.</p>
 
