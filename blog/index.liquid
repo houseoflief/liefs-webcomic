@@ -4,9 +4,9 @@ layout: layouts/page.liquid
 ---
 
 {% for item in collection %}
-<div>
-    <h2>{{ item.data.title }}</h2>
-    <p>{{ item.data.date }}</p>
+
+    <h2> {{ item.data.title }} </h2>
+    <p> {{ item.data.date }} </p>
     {{ content }}
-</div>
-{% end for %}
+
+{% endfor %}
