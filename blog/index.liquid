@@ -6,7 +6,8 @@ layout: layouts/page.liquid
 {% for item in collections.blog %}
 <div>
     <h2> {{ item.data.title }} </h2>
-    <p> {{ item.data.date }} </p>
+    <p class="authorNotes-date">posted on {{ date | utcDate }}</p>
     {{ content }}
+    
 </div>
 {% endfor %}
