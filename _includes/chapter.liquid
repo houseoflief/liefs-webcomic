@@ -5,12 +5,13 @@ collection, render out a `<div>` tag with its title, thumbnail, and a link to
 the page."
 {% endcomment %}
 
+
 {% if chapters %}
   {% for chapter in chapters %}
     <div class="chapter-container">
-        <img class="chapter-img" src="{{ collection[chapter][0].data.images[0] }}" alt="Thumbnail for Chapter">
+        <img class="chapter-img" src="{{ collection[chapter][0].data.images[0] }}" alt="Thumbnail for chapter">
         <div class="chapter-text">
-            <h2>Chapter {{chapter | slice: -1, 1}}</h2>
+            <h2>Chapter {{ chapter | slice: -1, 1 }}</h2>
             {% for item in collection[chapter] %}
               <div class="chapter">
                 <h3>
@@ -24,7 +25,6 @@ the page."
 {% else %}
   {% for item in collection.comic %}
     <div class="chapter">
-      {%# If `thumbnails` is true, display the page's thumbnail %}
       {% if thumbnails %}
         <img src="{{ item.data.images[0] }}" width="100" alt="Thumbnail for {{ item.data.title }}">
       {% endif %}
@@ -34,4 +34,3 @@ the page."
     </div>
   {% endfor %}
 {% endif %}
-

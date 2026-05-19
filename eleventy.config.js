@@ -11,6 +11,8 @@
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
+
+
 module.exports = function(eleventyConfig) {
 		// Copy `img` and `css` folders to output
 		eleventyConfig.addPassthroughCopy("img");
@@ -28,14 +30,23 @@ module.exports = function(eleventyConfig) {
 			const utc= (new Date(value)).toUTCString().split(' ');
 			return `${utc[2]} ${utc[1]}, ${utc[3]}`;
 		});
+		eleventyConfig.addLiquidFilter("dateFix", function(value) {
+        const dateObj = new Date(value);
+        const utcString = dateObj.toUTCString();
+        const [day, month, year] = utcString.split(' ').slice(1, 4);
+        return (day) (month), (year);
+    });	
 		eleventyConfig.addAsyncFilter("chapters", async function(collections) { 
 			return Object.keys(collections).filter(function (propertyName) {
 				if (propertyName.indexOf("chapter") === 0){
 					return propertyName;
 				}
 			});
-		});		
+		});	
+
+
 }
+
 
 
 

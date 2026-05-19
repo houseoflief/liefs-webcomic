@@ -25,18 +25,36 @@ For more information on collections, see https://www.11ty.dev/docs/collections/ 
 <select class="archive-select" name="comic" onchange="changePage(this.value)">
     <option value="" disabled selected>Select a comic...</option>
     {% for item in collections.comic -%}
-        <option value="{{ item.url }}">{{ item.date | date: "%b %d, %Y" }} - {{ item.data.title }}</option>
+        <option value="{{ item.url }}">{{ item.data.title }}</option>
     {%- endfor %}
 </select>
-{% comment %} ...and stop deleting from above (so everything between these comments) {% endcomment %}
 
 {% assign chapters = collections | chapters %}
 
+
+
+{% for chapter in collections.chapters %}
+  <details>
+    <summary>{{ chapter.chapter }}</summary>
+    <ul>
+      {% for page in chapter.pages %}
+        <li>
+          {% if page.data.images[0] %}
+            <img src="{{ page.data.images[0] }}" alt="{{ page.data.alt }}" style="width: 100px; height: auto;">
+          {% endif %}
+          <a href="{{ page.url }}">{{ page.data.title }}</a>
+          <span style="color: gray; font-size: 0.9em;">({{ page.date | dateFix | date: "%B %d, %Y" }})</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </details>
+{% endfor %}
 
 {% comment %} 
 by default this is set to display by chapter. Chapter view only has the first chapter page, no thumbnails per page.
 If you would rather a list of just pages, remove chapters: chapters, below, and then set thumbnails to true or false depending on if you'd like each page to have a thumbnail
 {% endcomment %}
+
 {% render 'chapter.liquid', thumbnails: false, chapters: chapters, collection: collections  %}
 
 
