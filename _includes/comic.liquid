@@ -4,9 +4,8 @@ If you want to remove one of the navigation buttons, just remove one of the
 {% endcomment %}
 
 {% assign next = collection | getNextCollectionItem: page %}
-<h1>{{ item.title }}</h1>
 <div id="comicPage" class="paperDiv">
-<h1>{{ title }}</h1>
+  <h1>{{ title }}</h1>
   {% for panel in images %}
     {% if next %}<a href="{{ next.url }}">{% endif %}
       <img src="{{ panel }}" alt="{{ alt }}" eleventy:ignore>
