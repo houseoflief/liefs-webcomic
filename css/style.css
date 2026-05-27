@@ -76,7 +76,7 @@ header {
   flex-direction: column;
   align-items: center;
   width: var(--pg-width);
-  margin-bottom: none;
+  margin: 1rem auto 0 auto;
   background-color: var(--content-bg);
   
 }
@@ -85,7 +85,6 @@ header nav {
   background-color: var(--content-bg);
   font-size:2rem;
   width: var(--pg-width);
-  margin: 1rem auto 0 auto;
   text-align: center;
   border-bottom: 1rem;
   padding: 0;
