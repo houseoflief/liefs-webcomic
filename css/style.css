@@ -88,7 +88,7 @@ header nav {
   text-align: center;
   border-bottom: 1rem solid var(--border-color);
   border-top: 1rem solid var(--border-color);
-  padding: 0;
+  
 }
 
 header nav a {
@@ -164,8 +164,9 @@ PAPER TEAR END - stop removing here */
 
 /* style nav button images */ 
 .comicNav {
-  border-bottom: var(--border-color);
+  border-bottom: 1rem solid var(--border-color);
   background-color: var(--content-bg);
+  width: var(--pg-width);
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
