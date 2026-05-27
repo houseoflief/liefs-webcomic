@@ -167,7 +167,8 @@ PAPER TEAR END - stop removing here */
   background-color: var(--content-bg);
   width: var(--pg-width);
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   align-self: center;
   align-items: center;
   justify-content: center;
