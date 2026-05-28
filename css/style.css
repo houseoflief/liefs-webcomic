@@ -86,8 +86,6 @@ header nav {
   font-size:2rem;
   width: var(--pg-width);
   text-align: center;
-
-  
 }
 
 header nav a {
@@ -168,7 +166,7 @@ PAPER TEAR END - stop removing here */
   background-color: var(--content-bg);
   width: var(--pg-width);
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-self: center;
   align-items: center;
   justify-content: center;
